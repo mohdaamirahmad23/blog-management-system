@@ -57,3 +57,26 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+# Blog Management System
+
+## Live Website
+https://blog-management-system-2-q4sa.onrender.com
+
+## Admin Panel
+https://blog-management-system-2-q4sa.onrender.com/admin/login
+
+## Technologies Used
+- Laravel
+- PHP
+- MySQL / SQLite
+- jQuery
+- AJAX
+- Bootstrap
+
+## Features
+- Blog listing
+- Blog details
+- Admin panel
+- Add/Edit/Delete blogs
+- AJAX category filter
+- Responsive design

@@ -4,6 +4,12 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 
 Route::get('/', function () {
+
+    if(!session()->has('admin'))
+    {
+        return redirect('/admin/login');
+    }
+
     return redirect('/dashboard');
 });
 
@@ -19,15 +25,7 @@ Route::get('/admin/login', function () {
 
 Route::post('/admin/login', [PostController::class, 'login']);
 
-Route::get('/dashboard', function () {
-
-    if(!session()->has('admin'))
-    {
-        return redirect('/admin/login');
-    }
-
-    return app()->call([App\Http\Controllers\PostController::class, 'index']);
-});
+Route::get('/dashboard', [PostController::class, 'index']);
 
 Route::post('/add-post', [PostController::class, 'store']);
 Route::get('/delete-post/{id}', [PostController::class, 'delete']);
